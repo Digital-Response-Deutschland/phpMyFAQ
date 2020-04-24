@@ -430,11 +430,12 @@ if ($action !== 'main') {
 //
 // Set sidebar column
 //
-if (($action === 'faq') || ($action === 'show') || ($action === 'main')) {
-    $sidebarTemplate = 'sidebar-tagcloud.html';
-} else {
-    $sidebarTemplate = '';
-}
+$sidebarTemplate = '';
+//if (($action === 'faq') || ($action === 'show') || ($action === 'main')) {
+//    $sidebarTemplate = 'sidebar-tagcloud.html';
+//} else {
+//    $sidebarTemplate = '';
+//}
 
 //
 // Check if FAQ should be secured

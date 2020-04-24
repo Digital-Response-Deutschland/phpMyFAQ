@@ -761,7 +761,7 @@ class Category
                 );
             }
 
-            if (0 === $number[$parent] && 0 === $level) {
+            if (0 === $number[$parent]) {
                 $numFaqs = '';
             } else {
                 $numFaqs = ' <span class="badge badge-primary">' .

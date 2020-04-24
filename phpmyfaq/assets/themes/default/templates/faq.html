@@ -1,17 +1,17 @@
 <section class="col-12">
   <article class="pmf-faq">
     <header>
-      <div class="float-right d-print-none" id="solution_id">
+      <!--<div class="float-right d-print-none" id="solution_id">
         <a class="badge badge-info" href="{{ solutionIdLink }}">
           ID #{{ solutionId }}
         </a>
-      </div>
+      </div>-->
       <h2>{{ question }}</h2>
       <div class="pmf-faq-meta clearfix">
-        <div class="pmf-faq-reading-time">
+        <!--<div class="pmf-faq-reading-time">
           <i aria-hidden="true" class="fa fa-clock-o"></i>
           <span class="data" id="pmf-reading-time-minutes">~ 0 min</span>
-        </div>
+        </div>-->
         <div class="pmf-faq-author">
           <i aria-hidden="true" class="fa fa-user"></i>
           <span class="data" rel="author">{{ faqAuthor }}</span>
@@ -88,35 +88,7 @@
     </div>
   </article>
 
-  <ul id="tab" class="nav nav-tabs d-print-none" role="tablist">
-    <li class="nav-item"><a class="nav-link active" href="#votingForm" data-toggle="tab">{{ msgVoteUsability }}</a></li>
-    [switchLanguage]
-    <li class="nav-item">
-      <a class="nav-link" href="#switchAvailableLanguage" data-toggle="tab">{{ msgChangeLanguage }}</a>
-    </li>
-    [/switchLanguage] [addTranslation]
-    <li class="nav-item"><a class="nav-link" href="#addTranslation" data-toggle="tab">{{ msgTranslate }}</a></li>
-    [/addTranslation]
-  </ul>
-
   <div class="tab-content pmf-faq-info d-print-none">
-    <div class="tab-pane active d-print-none" id="votingForm">
-      <form action="#" method="post" class="form-inline">
-        <input type="hidden" name="artikel" value="{{ saveVotingID }}" />
-        <div class="pmf-stars">
-          <div class="pmf-star-rating" data-rating="{{ msgAverageVote }}">
-            <span data-stars="5">☆</span>
-            <span data-stars="4">☆</span>
-            <span data-stars="3">☆</span>
-            <span data-stars="2">☆</span>
-            <span data-stars="1">☆</span>
-          </div>
-        </div>
-
-        <div class="text-right"><strong>{{ msgAverageVote }}</strong><span id="rating">{{ printVotings }}</span></div>
-      </form>
-      <div id="votings"></div>
-    </div>
     <div class="tab-pane d-print-none" id="switchAvailableLanguage">
       {{ switchLanguage }}
     </div>
@@ -197,14 +169,5 @@
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    'use strict';
-    $('div.pmf-stars > div.pmf-star-rating > span').on('click', event => {
-      const numStars = $(event.target).data('stars');
-      saveVoting('faq', '{{ id }}', numStars, '{{ lang }}');
-    });
-  });
-</script>
 <script src="assets/js/libs/highlight.pack.js"></script>
 <link rel="stylesheet" href="assets/js/libs/default.css" />

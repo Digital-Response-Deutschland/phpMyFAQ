@@ -21,6 +21,15 @@
   .pmf-social-links {
     flex: 1 1 auto;
   }
+
+  a {
+    color: $gray-100;
+    &:hover,
+    &:focus {
+      color: $gray-100;
+      outline: none;
+    }
+  }
 }
 
 // Rating stars

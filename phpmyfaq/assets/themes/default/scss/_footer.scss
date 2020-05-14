@@ -1,5 +1,14 @@
 .pmf-footer {
   background-color: fade_in($gray-900, 0.8);
+
+  a {
+    color: $gray-100;
+    &:hover,
+    &:focus {
+      color: $gray-100;
+      outline: none;
+    }
+  }
 }
 .pmf-footer-menu {
   list-style: none;
